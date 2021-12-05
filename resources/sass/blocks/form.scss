@@ -1,0 +1,64 @@
+.form {
+    &-group {
+        margin-bottom: 3rem;
+        label {
+            display: block;
+            margin-bottom: 1rem;
+            font-weight: bold;
+            color: #444;
+        }
+        &--flex {
+            display: flex;
+            align-items: center;
+            input {
+                margin-right: 1rem;
+            }
+        }
+    }
+    select,
+    input {
+        display: block;
+        width: 34rem;
+        height: 4rem;
+        text-indent: 0.6rem;
+        border-radius: 0.5rem;
+        border: 1px solid #ccc;
+        &.is-invalid {
+            border-color: red;
+        }
+    }
+    select {
+        appearance: none;
+        padding: 5px;
+        cursor: pointer;
+        option {
+            padding: 2rem;
+            font-size: 1.6rem;
+            line-height: 1.6;
+            text-indent: 1.6rem;
+        }
+    }
+    .info {
+        margin-bottom: 3rem;
+        font-size: 1.4rem;
+        a {
+            text-decoration: underline;
+            color: green;
+        }
+    }
+    .pickr {
+        button {
+            border: 1px solid maroon;
+        }
+    }
+    &-radio {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 0.6rem;
+        cursor: pointer;
+        label {
+            font-size: 1.4rem;
+        }
+    }
+}

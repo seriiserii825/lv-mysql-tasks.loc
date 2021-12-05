@@ -1,0 +1,21 @@
+.admin-table {
+    border-collapse: collapse;
+    th,
+    td {
+        padding: 1rem 2rem;
+        text-align: left;
+        border: 1px solid #ccc;
+    }
+    th {
+        color: white;
+        background-color: #444;
+    }
+    &__actions {
+        display: flex;
+        .btn {
+            margin-right: 1rem;
+            padding: 0 1rem;
+            height: 3rem;
+        }
+    }
+}

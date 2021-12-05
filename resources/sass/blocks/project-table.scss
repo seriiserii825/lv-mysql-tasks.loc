@@ -1,0 +1,18 @@
+.project-table {
+    width: 100%;
+    border-collapse: collapse;
+    display: flex;
+    justify-content: space-between;
+    &__column {
+        flex: 1;
+        border: 1px solid #ccc;
+        background-color: white;
+    }
+    &__title {
+        padding: 1rem 2rem;
+        border-bottom: 1px solid #ccc;
+    }
+    &__row {
+        padding: 1rem 2rem;
+    }
+}
