@@ -19,7 +19,7 @@ mix.js('resources/js/app.js', 'public/js')
     })
     .sourceMaps()
     .browserSync({
-        proxy: 'http://127.0.0.1:8000/',
+        proxy: 'http://lv-mysql-tasks.loc/',
         files: [
             'public/css/app.css',  // Generated .css file
             'public/js/app.js',    // Generated .js file
