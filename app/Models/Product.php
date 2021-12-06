@@ -12,4 +12,7 @@ class Product extends Model
     public function maker(){
         return $this->hasOne('App\Models\Maker', 'id');
     }
+    public function product_type(){
+        return $this->hasOne('App\Models\ProductType', 'id', 'type');
+    }
 }

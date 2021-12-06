@@ -20,7 +20,7 @@
                 <tr style="background: {{ $product->color }};">
                     <td>{{ $product->id }}</td>
                     <td>{{ $product->model}}</td>
-                    <td>{{ $product->type }}</td>
+                    <td>{{ $product->product_type->type }}</td>
                     <td>{{ $product->maker->title }}</td>
                     <td>{{ $product->created_at }}</td>
                     <td>
