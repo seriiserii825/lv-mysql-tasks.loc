@@ -35,16 +35,16 @@
         <div class="admin-layout__sidebar">
             <ul class="sidebar-list">
                 <li>
-                    <a class="btn btn--success" href="#">Home</a>
+                    <a class="btn btn--danger" href="#">Home</a>
                 </li>
                 <li>
-                    <a href="{{ route('product_type.index') }}">Product type</a>
+                    <a class="btn {{ request()->is('admin/product') ? 'btn--success' : '' }}" href="{{ route('product.index') }}">Products</a>
                 </li>
                 <li>
-                    <a href="{{ route('maker.index') }}">Maker</a>
+                    <a class="btn {{ request()->is('admin/product_type') ? 'btn--success' : '' }}" href="{{ route('product_type.index') }}">Product types</a>
                 </li>
                 <li>
-                    <a href="{{ route('product.index') }}">Product</a>
+                    <a class="btn {{ request()->is('admin/maker') ? 'btn--success' : '' }}" href="{{ route('maker.index') }}">Makers</a>
                 </li>
             </ul>
         </div>
