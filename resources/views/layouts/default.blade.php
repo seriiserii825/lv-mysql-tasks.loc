@@ -14,6 +14,7 @@
 <div class="tasks">
     <div class="sidebar tasks__sidebar">
         <ul class="tasks__list">
+            <li><a class="btn btn--contrast" href="{{ route('admin.index') }}">Admin</a></li>
             <li><a href="#">Task 1</a></li>
             <li><a href="#">Task 2</a></li>
         </ul>

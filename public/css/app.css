@@ -333,7 +333,7 @@ a {
   text-decoration: none;
   color: white;
   background-color: dodgerblue;
-  border: none;
+  border: none !important;
   border-radius: 0.5rem;
   cursor: pointer;
   transition: all 0.4s;
@@ -517,4 +517,9 @@ a {
 .table th {
   color: white;
   background-color: #444;
+}
+.table__info {
+  margin-bottom: 4rem;
+  padding: 2rem;
+  border: 1px solid #ccc;
 }
