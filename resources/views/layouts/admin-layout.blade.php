@@ -41,10 +41,7 @@
                     <a href="{{ route('product_type.index') }}">Product type</a>
                 </li>
                 <li>
-                    <a href="#">Columns</a>
-                </li>
-                <li>
-                    <a href="#">Cards</a>
+                    <a href="{{ route('product.index') }}">Product</a>
                 </li>
             </ul>
         </div>
