@@ -41,6 +41,9 @@
                     <a href="{{ route('product_type.index') }}">Product type</a>
                 </li>
                 <li>
+                    <a href="{{ route('maker.index') }}">Maker</a>
+                </li>
+                <li>
                     <a href="{{ route('product.index') }}">Product</a>
                 </li>
             </ul>

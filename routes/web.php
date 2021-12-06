@@ -19,6 +19,7 @@ Route::group(['prefix' => 'admin'], function () {
     Route::get('/', [\App\Http\Controllers\Admin\AdminController::class, 'index'])->name('admin.index');
     Route::resource('/product_type', '\App\Http\Controllers\Admin\ProductTypeController');
     Route::resource('/product', '\App\Http\Controllers\Admin\ProductController');
+    Route::resource('/maker', '\App\Http\Controllers\Admin\MakerController');
 //    Route::resource('/columns', '\App\Http\Controllers\Admin\ColumnController');
 //    Route::resource('/cards', '\App\Http\Controllers\Admin\CardController');
 });
