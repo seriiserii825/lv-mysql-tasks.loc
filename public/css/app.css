@@ -473,3 +473,48 @@ a {
 .card .btn {
   margin-top: 2rem;
 }
+
+.tasks {
+  display: flex;
+  min-height: 100vh;
+}
+.tasks__sidebar {
+  padding: 3rem;
+  flex: 0 0 30rem;
+  color: white;
+  background-color: #3c3c3c;
+}
+.tasks__sidebar a {
+  display: block;
+  margin-bottom: 1rem;
+  padding: 1rem;
+  border-bottom: 1px solid white;
+}
+.tasks__content {
+  flex: 1;
+  padding: 4rem;
+}
+.table {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+.table__item {
+  margin-bottom: 4rem;
+  width: 45%;
+}
+.table__title {
+  margin-bottom: 3rem;
+  border-bottom: 1px solid #ccc;
+}
+.table table {
+  border-collapse: collapse;
+}
+.table th, .table td {
+  padding: 1rem;
+  border: 1px solid #ccc;
+}
+.table th {
+  color: white;
+  background-color: #444;
+}
