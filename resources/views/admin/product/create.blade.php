@@ -5,7 +5,11 @@
         @csrf
         <div class="form-group">
             <label for="maker">Maker</label>
-            <input id="maker" type="text" name="maker">
+            <select name="maker_id" id="maker">
+                @foreach($makers as $maker)
+                    <option value="{{ $maker->id }}">{{ $maker->title }}</option>
+                @endforeach
+            </select>
         </div>
         <div class="form-group">
             <label for="model">Model</label>

@@ -7,5 +7,9 @@ use Illuminate\Database\Eloquent\Model;
 class Product extends Model
 {
     //
-    protected $fillable = ['maker', 'model', 'type'];
+    protected $fillable = ['model', 'type', 'maker_id'];
+
+    public function maker(){
+        return $this->hasOne('App\Models\Maker', 'id');
+    }
 }

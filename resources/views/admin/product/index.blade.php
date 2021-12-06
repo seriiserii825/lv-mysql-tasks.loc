@@ -10,14 +10,18 @@
         <table class="admin-table">
             <tr>
                 <th>Id</th>
+                <th>Model</th>
                 <th>Type</th>
+                <th>Maker</th>
                 <th>Date</th>
                 <th>Actions</th>
             </tr>
             @foreach ($products as $product)
                 <tr style="background: {{ $product->color }};">
                     <td>{{ $product->id }}</td>
+                    <td>{{ $product->model}}</td>
                     <td>{{ $product->type }}</td>
+                    <td>{{ $product->maker->title }}</td>
                     <td>{{ $product->created_at }}</td>
                     <td>
                         <div class="admin-table__actions">

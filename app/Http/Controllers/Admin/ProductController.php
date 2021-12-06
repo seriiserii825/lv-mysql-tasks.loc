@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
+use App\Models\Maker;
 use App\Models\Product;
 use App\Models\ProductType;
 use Illuminate\Http\Request;
@@ -26,18 +27,22 @@ class ProductController extends Controller
     public function create()
     {
         $product_types = ProductType::all();
-        return view('admin.product.create', compact('product_types'));
+        $makers = Maker::all();
+        return view('admin.product.create', compact('product_types', 'makers'));
     }
 
     /**
      * Store a newly created resource in storage.
      *
      * @param \Illuminate\Http\Request $request
-     * @return \Illuminate\Http\Response
      */
     public function store(Request $request)
     {
-        //
+        $request->validate([
+            'model' => 'required'
+        ]);
+        Product::create($request->all());
+        return redirect()->route('product.index')->with('success', 'Product type was created');
     }
 
     /**
