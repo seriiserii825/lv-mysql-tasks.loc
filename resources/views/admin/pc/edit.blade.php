@@ -10,27 +10,32 @@
         </div>
         <div class="form-group">
             <label for="model">Model</label>
-            <input id="model" type="number" name="model"  value="{{ $pc->model }}">
+            <select name="model" id="model">
+                @foreach($models as $model)
+                    <option @if($model === $pc->model) selected
+                            @endif value="{{ $model->model }}">{{ $model->model }}</option>
+                @endforeach
+            </select>
         </div>
         <div class="form-group">
             <label for="speed">Speed(processor in mHz)</label>
-            <input id="speed" type="number" name="speed"  value="{{ $pc->speed }}">
+            <input id="speed" type="number" name="speed" value="{{ $pc->speed }}">
         </div>
         <div class="form-group">
             <label for="ram">Ram(Mb)</label>
-            <input id="ram" type="number" name="ram"  value="{{ $pc->ram }}">
+            <input id="ram" type="number" name="ram" value="{{ $pc->ram }}">
         </div>
         <div class="form-group">
             <label for="hd">Hd(Gb)</label>
-            <input id="hd" type="number" name="hd"  value="{{ $pc->hd }}">
+            <input id="hd" type="number" name="hd" value="{{ $pc->hd }}">
         </div>
         <div class="form-group">
             <label for="cd">Cd (4x)</label>
-            <input id="cd" type="text" name="cd"  value="{{ $pc->cd }}">
+            <input id="cd" type="text" name="cd" value="{{ $pc->cd }}">
         </div>
         <div class="form-group">
             <label for="price">Price</label>
-            <input id="price" type="number" name="price"  value="{{ $pc->price }}">
+            <input id="price" type="number" name="price" value="{{ $pc->price }}">
         </div>
         <button type="submit" class="btn">Update</button>
     </form>

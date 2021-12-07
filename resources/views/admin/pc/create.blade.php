@@ -10,8 +10,8 @@
         <div class="form-group">
             <label for="model">Model</label>
             <select name="model" id="model">
-                @foreach($models as $model)
-                    <option value="{{ $model->model }}">{{ $model->model }}</option>
+                @foreach($products as $product)
+                    <option value="{{ $product->model }}">{{ $product->maker }}</option>
                 @endforeach
             </select>
         </div>

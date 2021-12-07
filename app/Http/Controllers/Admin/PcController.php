@@ -25,8 +25,8 @@ class PcController extends Controller
      */
     public function create()
     {
-        $models = Product::query()->select('model')->get();
-        return view('admin.pc.create', compact('models'));
+        $products = Product::all();
+        return view('admin.pc.create', compact('products'));
     }
 
     /**
@@ -68,7 +68,8 @@ class PcController extends Controller
     public function edit($id)
     {
         $pc = Pc::find($id);
-        return view('admin.pc.edit', compact('pc'));
+        $models = Product::query()->select('model')->get();
+        return view('admin.pc.edit', compact('pc', 'models'));
     }
 
     /**

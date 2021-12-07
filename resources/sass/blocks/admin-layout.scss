@@ -2,7 +2,7 @@
     &__wrap {
         display: flex;
         justify-content: space-between;
-        height: 100vh;
+        min-height: 100vh;
     }
     &__sidebar {
         flex: 0 0 20rem;
@@ -15,7 +15,7 @@
     }
     &__content {
         flex: 1;
-        padding: 3rem;
+        padding: 3rem 3rem 10rem;
     }
     &__new {
         display: inline-block;

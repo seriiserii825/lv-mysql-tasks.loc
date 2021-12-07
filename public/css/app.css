@@ -268,7 +268,7 @@ a {
 .admin-layout__wrap {
   display: flex;
   justify-content: space-between;
-  height: 100vh;
+  min-height: 100vh;
 }
 .admin-layout__sidebar {
   flex: 0 0 20rem;
@@ -281,7 +281,7 @@ a {
 }
 .admin-layout__content {
   flex: 1;
-  padding: 3rem;
+  padding: 3rem 3rem 10rem;
 }
 .admin-layout__new {
   display: inline-block;
