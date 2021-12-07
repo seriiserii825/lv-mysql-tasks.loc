@@ -288,6 +288,12 @@ a {
   margin-bottom: 4rem;
 }
 
+.sidebar-list ul a {
+  margin-left: 1rem;
+  padding: 0.2rem 0.5rem;
+  font-size: 1.4rem;
+  height: 3rem;
+}
 .sidebar-list a {
   display: block;
   margin-bottom: 1rem;

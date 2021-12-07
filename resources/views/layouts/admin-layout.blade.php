@@ -40,14 +40,20 @@
                 <li>
                     <a class="btn {{ request()->is('admin/product') || request()->is('admin/product/create') || request()->is('admin/product/*/edit') ? 'btn--success' : '' }}"
                        href="{{ route('product.index') }}">Products</a>
+                    <ul>
+                        <li>
+                            <a class="btn {{ request()->is('admin/product_type') ? 'btn--success' : '' }}"
+                               href="{{ route('product_type.index') }}">Product types</a>
+                        </li>
+                        <li>
+                            <a class="btn {{ request()->is('admin/maker') ? 'btn--success' : '' }}"
+                               href="{{ route('maker.index') }}">Makers</a>
+                        </li>
+                    </ul>
                 </li>
                 <li>
-                    <a class="btn {{ request()->is('admin/product_type') ? 'btn--success' : '' }}"
-                       href="{{ route('product_type.index') }}">Product types</a>
-                </li>
-                <li>
-                    <a class="btn {{ request()->is('admin/maker') ? 'btn--success' : '' }}"
-                       href="{{ route('maker.index') }}">Makers</a>
+                    <a class="btn {{ request()->is('admin/pc') || request()->is('admin/pc/create') || request()->is('admin/pc/*/edit') ? 'btn--success' : '' }}"
+                       href="{{ route('pc.index') }}">Pc</a>
                 </li>
             </ul>
         </div>

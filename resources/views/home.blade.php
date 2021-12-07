@@ -14,8 +14,8 @@
                 <div class="table__info">Таблица <strong> product_type</strong> определяет тип продукта.</div>
                 <table>
                     <thead>
-                    <th>ID</th>
-                    <th>Type</th>
+                    <th>id</th>
+                    <th>type</th>
                     </thead>
                     <tbody>
                     @foreach($product_types as $product_type)
@@ -34,17 +34,17 @@
                 <div class="table__info">Таблица <strong> products</strong> определяет тип продукта.</div>
                 <table>
                     <thead>
-                    <th>ID</th>
-                    <th>Model</th>
-                    <th>Type</th>
-                    <th>Maker</th>
+                    <th>id</th>
+                    <th>model</th>
+                    <th>type</th>
+                    <th>maker</th>
                     </thead>
                     <tbody>
                     @foreach($products as $product)
                         <tr>
                             <td>{{ $product->id }}</td>
                             <td>{{ $product->model }}</td>
-                            <td>{{ $product->product_type }}</td>
+                            <td>{{ $product->product_type->type }}</td>
                             <td>{{ $product->maker->title }}</td>
                         </tr>
                     @endforeach

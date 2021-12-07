@@ -3,12 +3,11 @@
 namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
-use App\Models\Maker;
+use App\Models\Pc;
 use App\Models\Product;
-use App\Models\ProductType;
 use Illuminate\Http\Request;
 
-class ProductController extends Controller
+class PcController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -16,8 +15,8 @@ class ProductController extends Controller
      */
     public function index()
     {
-        $products = Product::all();
-        return view('admin.product.index', compact('products'));
+        $pcs = Pc::all();
+        return view('admin.pc.index', compact('pcs'));
     }
 
     /**
@@ -26,9 +25,8 @@ class ProductController extends Controller
      */
     public function create()
     {
-        $product_types = ProductType::all();
-        $makers = Maker::all();
-        return view('admin.product.create', compact('product_types', 'makers'));
+        $models = Product::query()->select('model')->get();
+        return view('admin.pc.create', compact('models'));
     }
 
     /**
@@ -39,10 +37,16 @@ class ProductController extends Controller
     public function store(Request $request)
     {
         $request->validate([
-            'model' => 'required'
+            'code' => 'required',
+            'model' => 'required',
+            'speed' => 'required',
+            'ram' => 'required',
+            'hd' => 'required',
+            'cd' => 'required',
+            'price' => 'required'
         ]);
-        Product::create($request->all());
-        return redirect()->route('product.index')->with('success', 'Product type was created');
+        Pc::create($request->all());
+        return redirect()->route('pc.index')->with('success', 'Pc type was created');
     }
 
     /**
@@ -63,10 +67,8 @@ class ProductController extends Controller
      */
     public function edit($id)
     {
-        $product_types = ProductType::all();
-        $makers = Maker::all();
-        $product = Product::find($id);
-        return view('admin.product.edit', compact('product', 'makers', 'product_types'));
+        $pc = Pc::find($id);
+        return view('admin.pc.edit', compact('pc'));
     }
 
     /**
@@ -78,11 +80,17 @@ class ProductController extends Controller
     public function update(Request $request, $id)
     {
         $request->validate([
-            'model' => 'required'
+            'code' => 'required',
+            'model' => 'required',
+            'speed' => 'required',
+            'ram' => 'required',
+            'hd' => 'required',
+            'cd' => 'required',
+            'price' => 'required'
         ]);
-        $product = Product::find($id);
-        $product->update($request->all());
-        return redirect()->route('product.index')->with('success', 'Product type was updated');
+        $pc = Pc::find($id);
+        $pc->update($request->all());
+        return redirect()->route('pc.index')->with('success', 'Pc type was updated');
     }
 
     /**
@@ -92,8 +100,8 @@ class ProductController extends Controller
      */
     public function destroy($id)
     {
-        $product = Product::find($id);
-        $product->delete();
-        return redirect()->route('product.index')->with('Product was deleted');
+        $pc = Pc::find($id);
+        $pc->delete();
+        return redirect()->route('pc.index')->with('Pc was deleted');
     }
 }

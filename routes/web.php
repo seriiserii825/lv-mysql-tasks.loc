@@ -20,6 +20,5 @@ Route::group(['prefix' => 'admin'], function () {
     Route::resource('/product_type', '\App\Http\Controllers\Admin\ProductTypeController');
     Route::resource('/product', '\App\Http\Controllers\Admin\ProductController');
     Route::resource('/maker', '\App\Http\Controllers\Admin\MakerController');
-//    Route::resource('/columns', '\App\Http\Controllers\Admin\ColumnController');
-//    Route::resource('/cards', '\App\Http\Controllers\Admin\CardController');
+    Route::resource('/pc', '\App\Http\Controllers\Admin\PcController');
 });
